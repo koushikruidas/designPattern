@@ -1,6 +1,6 @@
-package Pattern.Creational.Factory.abstractFactory;
+package Pattern.Creational.Factory.factory;
 
-import Pattern.Creational.Factory.factory.Animal;
+import Pattern.Creational.Factory.abstractFactory.Animal;
 
 public class Cow implements Animal {
     @Override

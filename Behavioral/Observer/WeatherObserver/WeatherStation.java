@@ -3,45 +3,45 @@ package Pattern.Behavioral.Observer.WeatherObserver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeatherStation implements Subject{
+public class WeatherStation implements Publisher {
 
     private int pressure;
     private int humidity;
     private int temperature;
-    private List<Observer> observers;
+    private List<Subscriber> subscribers;
 
     public WeatherStation(){
-        this.observers = new ArrayList<>();
+        this.subscribers = new ArrayList<>();
     }
     @Override
-    public void addObserver(Observer o) {
-        observers.add(o);
-    }
-
-    @Override
-    public void removeObserver(Observer o) {
-        observers.remove(o);
+    public void addSubscriber(Subscriber o) {
+        subscribers.add(o);
     }
 
     @Override
-    public void notifyAllObservers() {
-        for (Observer o : observers){
+    public void removeObserver(Subscriber o) {
+        subscribers.remove(o);
+    }
+
+    @Override
+    public void notifyAllSubscribers() {
+        for (Subscriber o : subscribers){
             o.update(pressure,humidity, temperature);
         }
     }
 
     public void setPressure(int pressure) {
         this.pressure = pressure;
-        notifyAllObservers();
+        notifyAllSubscribers();
     }
 
     public void setHumidity(int humidity) {
         this.humidity = humidity;
-        notifyAllObservers();
+        notifyAllSubscribers();
     }
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;
-        notifyAllObservers();
+        notifyAllSubscribers();
     }
 }

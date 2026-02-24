@@ -1,7 +1,6 @@
-package Pattern.Creational.Factory.abstractFactory;
+package Pattern.Creational.Factory.factory;
 
-import Pattern.Creational.Factory.Dog;
-import Pattern.Creational.Factory.factory.Animal;
+import Pattern.Creational.Factory.abstractFactory.Animal;
 
 public class AnimalFactory {
     public static Animal createAnimal(String type) throws IllegalAccessException {

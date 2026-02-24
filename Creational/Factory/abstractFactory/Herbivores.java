@@ -1,4 +1,4 @@
-package Pattern.Creational.Factory.factory;
+package Pattern.Creational.Factory.abstractFactory;
 
 public interface Herbivores extends Animal{
 }

@@ -1,4 +1,4 @@
 package Pattern.Creational.Factory.abstractFactory;
 
-public class HerbivoresAnimal {
+public interface HerbivoresAnimal extends Herbivores{
 }

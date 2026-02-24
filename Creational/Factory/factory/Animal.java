@@ -1,4 +1,4 @@
-package Pattern.Creational.Factory.abstractFactory;
+package Pattern.Creational.Factory.factory;
 
 public interface Animal {
     void eat();

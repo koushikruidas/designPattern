@@ -1,6 +1,6 @@
 package Pattern.Behavioral.Observer.WeatherObserver;
 
-public class WeatherObserver implements Observer{
+public class WeatherSubscriber implements Subscriber {
 
     private int pressure;
     private int humidity;

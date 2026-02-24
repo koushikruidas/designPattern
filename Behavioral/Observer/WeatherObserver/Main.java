@@ -4,11 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
         WeatherStation station = new WeatherStation();
-        WeatherObserver observer = new WeatherObserver();
-        station.addObserver(observer);
+        WeatherSubscriber subscriber = new WeatherSubscriber();
+        station.addSubscriber(subscriber);
         station.setHumidity(75);
         station.setTemperature(27);
         station.setPressure(1);
+        station.removeObserver(subscriber);
     }
 
 }
